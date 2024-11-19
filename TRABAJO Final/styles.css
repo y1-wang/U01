@@ -1,3 +1,26 @@
 body{
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background: pink;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
+.container2{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput{
+    flex: 1;
+    padding: 10px;
 }

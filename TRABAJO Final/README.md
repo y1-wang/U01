@@ -1,5 +1,7 @@
-# Práctica 1ª: Todo List
-Lista, donde se guarden las tareas que se añaden.
-Borrar, poner fechas, estructurado.
+# Práctica 1ª: To Do List
+Esta práctica consiste en la creación de una lista de tareas, donde:
+-Se añadan a la lista las tareas que hemos introducido.
+-Borrarlas una vez realizadas.
+
 
 ## Estructura
