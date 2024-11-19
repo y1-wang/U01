@@ -1,13 +1,15 @@
 body{
     font-family: 'Times New Roman', Times, serif;
-    background-color: lightpink;
+    background-color: rgb(249, 203, 210);
     display: flex;
+    padding: 0;
     justify-content: center;
     align-items: center;
+  
 }
 
 .container{
-    background: pink;
+    background: rgb(241, 135, 135);
     border: 2px solid red;
     border-radius: 5px;
     padding: 20px;
@@ -23,4 +25,41 @@ body{
 #taskInput{
     flex: 1;
     padding: 10px;
+    font-size: 15px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#addTask{
+    padding: 10px 20px;
+    background-color: rgb(249, 203, 210);
+    border: 2px solid red;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList{
+    list-style:none;
+    padding: 0;
+}
+
+#taskList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#taskList li .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
