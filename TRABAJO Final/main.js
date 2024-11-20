@@ -11,8 +11,30 @@ function addTask() {
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "\u00d7"; //X element
         li.appendChild(span);
     }
     inputBox.value = "";
+    saveData();
 }
+
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){  //if we click in "LI", it will mark it checked
+        e.target.classList.toggle("checked");
+        saveDate();
+    }
+    else if(e.target.tagName === "SPAN"){ //if we click in "SPAN", it will remove it
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
