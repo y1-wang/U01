@@ -21,7 +21,7 @@ function addTask() {
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){  //if we click in "LI", it will mark it checked
         e.target.classList.toggle("checked");
-        saveDate();
+        saveData();
     }
     else if(e.target.tagName === "SPAN"){ //if we click in "SPAN", it will remove it
         e.target.parentElement.remove();
