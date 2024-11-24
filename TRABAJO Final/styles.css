@@ -5,14 +5,14 @@ body{
     box-sizing: border-box;
 }
 
-.container{
+.container{ /*fondo*/
     width: 100%;
     min-height: 100vh;
     background: rgb(241, 135, 135);
     padding: 10px;
 }
 
-.todo-app{
+.todo-app{ /*contenedor blanco del to do list*/
     width: 100%;
     max-width: 540px;
     background: #fff;
@@ -21,14 +21,14 @@ body{
     border-radius: 10px;
 }
 
-.todo-app h2{
+.todo-app h2{ /*fuente del contenedor*/
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.row{
+.row{ /*barra de introducir tarea*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@ body{
     margin-bottom: 25px;
 }
 
-input{
+input{ /*arreglos de la barra*/
     flex:1;
     border: none;
     outline: none;
@@ -46,7 +46,7 @@ input{
     padding: 10px;
 }
 
-button{
+button{ /*botón de añadir tareas*/
     border: none;
     outline: none;
     padding: 16px 50px;
@@ -57,6 +57,7 @@ button{
     border-radius: 40px;
 }
 
+/*estilos de la lista*/
 ul li{
     list-style: none;
     font-size: 17px;
@@ -66,7 +67,7 @@ ul li{
     position: relative;
 }
 
-ul li::before{
+ul li::before{ /*circulito de la tarea para uncheck*/
     content: '';
     position: absolute;
     height: 28px;
@@ -79,16 +80,16 @@ ul li::before{
     left: 8px;
 }
 
-ul li.checked{
+ul li.checked{ /*tarea tachado*/
     color:#555;
     text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before{  /*circulito de la tarea para check*/
     background-image: url(images/checked.png);
 }
 
-ul li span{
+ul li span{ /*la cruz de eliminar*/
     position: absolute;
     right: 0;
     top: 5px;
@@ -101,7 +102,7 @@ ul li span{
     border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover{  /*cuando pasa el ratón por encima, cambiar el cursor*/
     background: #edeef0;
 }
 

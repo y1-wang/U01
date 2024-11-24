@@ -1,39 +1,39 @@
 const inputBox = document.getElementById('input-box');
 const listContainer = document.getElementById('list-container');
 
-// Función para añadir una tarea
+// Función para añadir una tarea a la lista
 function addTask() {   
-    if (inputBox.value === '') {
-        alert('Introduzca una tarea!');
+    if (inputBox.value === '') {  //si envían una tarea vacía sale una alerta en el navegador
+        alert('Introduzca una tarea!'); //este es el mensaje que saltaría
     }
     else{
-        let li = document.createElement("li");
+        let li = document.createElement("li"); //crea el elemente de lista
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7"; //X element
+        span.innerHTML = "\u00d7"; //muestra la X como botón de eliminar
         li.appendChild(span);
     }
     inputBox.value = "";
-    saveData();
+    saveData(); //almacena los datos de la lista para que no se borre cuando se cierre el navegador
 }
 
 listContainer.addEventListener("click", function(e){
-    if(e.target.tagName === "LI"){  //if we click in "LI", it will mark it checked
+    if(e.target.tagName === "LI"){  //si clicamos en <li>, aparecerá como marcado
         e.target.classList.toggle("checked");
-        saveData();
+        saveData(); //guardar los cambios
     }
-    else if(e.target.tagName === "SPAN"){ //if we click in "SPAN", it will remove it
+    else if(e.target.tagName === "SPAN"){ //y si clicamos en <span> (la X), se desmarcará
         e.target.parentElement.remove();
-        saveData();
+        saveData(); //guardar los cambios
     }
 }, false);
 
-function saveData(){
+function saveData(){ //función del almacenaje de los datos y cambios actualizados
     localStorage.setItem("data", listContainer.innerHTML);
 }
 
-function showTask(){
+function showTask(){ //al refrescar el navegador
     listContainer.innerHTML = localStorage.getItem("data");
 }
 
